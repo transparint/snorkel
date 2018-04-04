@@ -32,7 +32,7 @@ setup(
         'matplotlib',
         'nltk',
         'numba',
-#        '-e git+https://github.com/HazyResearch/numbskull@master',
+        '-e git+https://github.com/transparint/numbskull@master',
         'numpy>=1.11',
         'pandas',
         'requests',
