@@ -100,7 +100,7 @@ class StanfordCoreNLPServer(Parser):
         :param force_load:  Force server to pre-load models vs. on-demand
         :return:
         '''
-        loc = os.path.join(os.environ['SNORKELHOME'], 'parser')
+        loc = os.path.dirname(os.path.realpath(__file__))
         cmd = 'java -Xmx%s -cp "%s/*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer --port %d --timeout %d --threads %d > /dev/null'
         cmd = [cmd % (self.java_xmx, loc, self.port, self.timeout, self.num_threads)]
 
